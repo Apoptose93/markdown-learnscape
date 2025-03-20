@@ -17,6 +17,7 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ markdownPath }) => 
     const fetchMarkdown = async () => {
       try {
         setIsLoading(true)
+        console.log('Fetching markdown from:', markdownPath)
         const response = await fetch(markdownPath)
         if (!response.ok) {
           throw new Error(`Failed to fetch markdown: ${response.status}`)
@@ -33,7 +34,7 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ markdownPath }) => 
         setError(null)
       } catch (err) {
         console.error('Error fetching markdown:', err)
-        setError('Failed to load content. Please try again later.')
+        setError(`Failed to load content from ${markdownPath}. Please try again later.`)
       } finally {
         setIsLoading(false)
       }

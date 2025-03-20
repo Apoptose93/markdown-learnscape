@@ -7,8 +7,8 @@ const ProductPage = () => {
   const { product } = useParams<{ product: string }>()
   
   return (
-    <div>
-      <MarkdownRenderer markdownPath={`/products/${product}.md`} />
+    <div className="container mx-auto px-4 py-8">
+      <MarkdownRenderer markdownPath={`./content/products/${product}.md`} />
     </div>
   )
 }

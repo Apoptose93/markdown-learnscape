@@ -28,6 +28,13 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Copy Content Folder
+        run: |
+          mkdir -p dist/content
+          cp -r content/* dist/content/
+          mkdir -p dist/img
+          cp -r img/* dist/img/
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:

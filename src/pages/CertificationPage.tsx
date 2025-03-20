@@ -7,8 +7,8 @@ const CertificationPage = () => {
   const { cert } = useParams<{ cert: string }>()
   
   return (
-    <div>
-      <MarkdownRenderer markdownPath={`/topics/certifications/${cert}.md`} />
+    <div className="container mx-auto px-4 py-8">
+      <MarkdownRenderer markdownPath={`./content/topics/certifications/${cert}.md`} />
     </div>
   )
 }

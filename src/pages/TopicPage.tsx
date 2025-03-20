@@ -11,14 +11,14 @@ const TopicPage = () => {
   
   if (topic?.includes('/')) {
     // For nested paths like 'certifications/az-900'
-    markdownPath = `/topics/${topic}.md`
+    markdownPath = `./content/topics/${topic}.md`
   } else {
     // For regular topics
-    markdownPath = `/topics/${topic}.md`
+    markdownPath = `./content/topics/${topic}.md`
   }
 
   return (
-    <div>
+    <div className="container mx-auto px-4 py-8">
       <MarkdownRenderer markdownPath={markdownPath} />
     </div>
   )
