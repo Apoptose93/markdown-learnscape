@@ -11,5 +11,8 @@ export default defineConfig({
       '@': resolve(__dirname, './src'),
     },
   },
-  base: './' // This is important for GitHub Pages
+  base: './', // This is important for GitHub Pages
+  server: {
+    port: 8080
+  }
 })
