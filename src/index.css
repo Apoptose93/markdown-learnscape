@@ -1,0 +1,53 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #0078D4;
+  --secondary-color: #50E6FF;
+  --dark-color: #243A5E;
+  --light-color: #F0F5FF;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: var(--light-color);
+}
+
+/* Markdown styling */
+.markdown-content h1 {
+  @apply text-3xl font-bold mb-6 text-gray-900;
+}
+
+.markdown-content h2 {
+  @apply text-2xl font-semibold mb-4 text-gray-800 mt-8;
+}
+
+.markdown-content h3 {
+  @apply text-xl font-semibold mb-3 text-gray-700 mt-6;
+}
+
+.markdown-content p {
+  @apply mb-4 text-gray-600 leading-relaxed;
+}
+
+.markdown-content a {
+  @apply text-blue-600 hover:text-blue-800 transition-colors;
+}
+
+.markdown-content table {
+  @apply w-full border-collapse my-6;
+}
+
+.markdown-content th,
+.markdown-content td {
+  @apply border p-2 text-left;
+}
+
+.markdown-content th {
+  @apply bg-gray-100;
+}
